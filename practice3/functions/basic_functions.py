@@ -17,3 +17,4 @@ greet_person("Aigerim")
 def area(a,b):
     print(a*b)
 area(3,4)
+
