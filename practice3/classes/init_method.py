@@ -29,3 +29,5 @@ class City:
         self.name = name
 
 print(City("Almaty").name)
+
+
