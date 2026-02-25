@@ -1,0 +1,17 @@
+{
+        "Name": "Aigerim",
+        "Age": 18,
+        "University": "KBTU",
+        "Phone": "7-777-777-77-77",
+        "Media": {
+                "Vk": "vk.com",
+                "Insta": "instagram.com",
+                "Youtube": "youtube.com",
+                "Onlyfans": null
+        },
+        "Region": [
+                "Almaty",
+                "Astana",
+                "Kyzylorda"
+        ]
+}

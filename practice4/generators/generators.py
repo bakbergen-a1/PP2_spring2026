@@ -6,25 +6,6 @@ print(next(it))
 print(next(it))
 print(next(it))
 
-#iterator class 
-class Counter:
-    def __iter__(self):
-        self.num = 1
-        return self
-
-    def __next__(self):
-        if self.num <= 10:
-            value = self.num
-            self.num += 1
-            return value
-        else:
-            raise StopIteration
-
-counter = Counter()
-
-for x in counter:
-    print(x)
-
 #generator function (even numbers)
 def even_numbers(n):
     for i in range(0,n+1, 2):
@@ -48,3 +29,10 @@ squares = (x*x for x in range(5))
 
 for s in squares:
     print(s)
+
+def root_squares(n):
+    for i in range(n):
+        yield i**0.5
+n=int(input())
+for i in root_squares(n):
+    print(i)

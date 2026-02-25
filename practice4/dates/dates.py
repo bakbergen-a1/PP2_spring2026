@@ -23,5 +23,5 @@ print(difference.days)
 
 #Time formatting (strftime)
 now = datetime.datetime.now()
-formatted = now.strftime("%d-%m-%Y %H:%M:%S")
+formatted = now.strftime("%d-%m-%Y %H:%M:%S %A")
 print(formatted)

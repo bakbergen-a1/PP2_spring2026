@@ -19,4 +19,4 @@ n=int(input())
 for x in even(n):
     res.append(str(x))
 print(",".join(res))
-    
+
