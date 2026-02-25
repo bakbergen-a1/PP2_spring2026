@@ -30,6 +30,12 @@ squares = (x*x for x in range(5))
 for s in squares:
     print(s)
 
+
+
+
+
+
+
 def root_squares(n):
     for i in range(n):
         yield i**0.5

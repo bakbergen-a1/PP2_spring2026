@@ -26,3 +26,4 @@ students = [
 
 json_data = json.dumps(students, indent=4)
 print(json_data)
+
