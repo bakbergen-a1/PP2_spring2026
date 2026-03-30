@@ -1,12 +1,12 @@
-CREATE OR REPLACE FUNCTION search_contacts(word TEXT)
+CREATE OR REPLACE FUNCTION search_contacts(x TEXT)
 RETURNS TABLE(name VARCHAR, phone VARCHAR)
 AS $$
 BEGIN
     RETURN QUERY
     SELECT c.name, c.phone
     FROM contacts c
-    WHERE c.name ILIKE '%' || word || '%'
-       OR c.phone ILIKE '%' || word || '%';
+    WHERE c.name ILIKE '%' || x || '%'
+       OR c.phone ILIKE '%' || x || '%';
 END;
 $$ LANGUAGE plpgsql;
 
