@@ -5,15 +5,18 @@ from clock import draw_clock_hands
 
 pygame.init()
 
-WIDTH, HEIGHT = 600, 600
+WIDTH, HEIGHT = 700, 700
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("Mickey's Clock")
+pygame.display.set_caption("Real Mickey Clock")
 
-# load background image
+# full image outside as real wall clock
 background = pygame.image.load("practice9/mickeys_clock/images/mickeyclock.jpeg")
 background = pygame.transform.scale(background, (WIDTH, HEIGHT))
 
 fps_clock = pygame.time.Clock()
+
+CENTER_X = WIDTH // 2
+CENTER_Y = HEIGHT // 2
 
 while True:
     for event in pygame.event.get():
@@ -21,18 +24,17 @@ while True:
             pygame.quit()
             sys.exit()
 
-    # draw clock image
+    # show full photo
     screen.blit(background, (0, 0))
 
-    # get current system time
+    # real system time
     now = datetime.now()
-    minutes = now.minute
-    seconds = now.second
+    hour = now.hour % 12
+    minute = now.minute
+    second = now.second
 
-    # draw hands
-    draw_clock_hands(screen, WIDTH // 2, HEIGHT // 2, minutes, seconds)
+    # draw real clock hands
+    draw_clock_hands(screen, CENTER_X, CENTER_Y, hour, minute, second)
 
     pygame.display.flip()
-
-    # update every second
     fps_clock.tick(1)
