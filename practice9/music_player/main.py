@@ -8,7 +8,7 @@ pygame.mixer.init()
 screen = pygame.display.set_mode((600, 200))
 pygame.display.set_caption("Music Player")
 
-font = pygame.font.SysFont(None, 36)
+font = pygame.font.SysFont('cmmi10', 50)
 
 playlist = ["practice9/music_player/music/music_1.mp3", "practice9/music_player/music/music_2.mp3"]
 player = MusicPlayer(playlist)
