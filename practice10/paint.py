@@ -52,12 +52,12 @@ while running:
             if event.key == pygame.K_5:
                 color = (255, 255, 255) # white
 
-        # 🖱 Mouse button pressed
+        #  Mouse button pressed
         if event.type == pygame.MOUSEBUTTONDOWN:
             drawing = True
             start_pos = event.pos
 
-        # 🖱 Mouse button released
+        #  Mouse button released
         if event.type == pygame.MOUSEBUTTONUP:
             drawing = False
             end_pos = event.pos
