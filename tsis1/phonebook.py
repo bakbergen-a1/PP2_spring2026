@@ -2,7 +2,7 @@ import csv
 from connect import connect
 
 
-# ---------------- ADD CONTACT ----------------
+#ADD CONTACT
 def add_contact(conn):
     name = input("Name: ")
     email = input("Email: ")
@@ -20,7 +20,7 @@ def add_contact(conn):
     print("Contact added:", contact_id)
 
 
-# ---------------- ADD PHONE (PROCEDURE) ----------------
+#ADD PHONE (PROCEDURE) 
 def add_phone(conn):
     name = input("Contact name: ")
     phone = input("Phone: ")
@@ -33,7 +33,7 @@ def add_phone(conn):
     print("Phone added")
 
 
-# ---------------- MOVE TO GROUP (PROCEDURE) ----------------
+#MOVE TO GROUP (PROCEDURE) 
 def move_group(conn):
     name = input("Contact name: ")
     group = input("Group name: ")
@@ -48,7 +48,7 @@ def move_group(conn):
     print("Group updated")
 
 
-# ---------------- SEARCH ----------------
+#SEARCH 
 def search(conn):
     q = input("Search: ")
 
@@ -60,7 +60,7 @@ def search(conn):
         print(r)
 
 
-# ---------------- FILTER BY GROUP ----------------
+#FILTER BY GROUP
 def filter_by_group(conn):
     group = input("Group: ")
 
@@ -75,7 +75,7 @@ def filter_by_group(conn):
             print(r)
 
 
-# ---------------- SORT ----------------
+#SORT
 def sort_contacts(conn):
     field = input("Sort by (name/birthday/created_at): ")
 
@@ -88,7 +88,7 @@ def sort_contacts(conn):
             print(r)
 
 
-# ---------------- PAGINATION ----------------
+#PAGINATION
 def paginate(conn):
     limit = 3
     offset = 0
@@ -115,7 +115,7 @@ def paginate(conn):
             break
 
 
-# ---------------- CSV IMPORT ----------------
+#CSV IMPORT
 def import_csv(conn, filename="tsis1/contacts.csv"):
     with open(filename, "r") as file:
         reader = csv.DictReader(file)
@@ -173,7 +173,7 @@ def import_csv(conn, filename="tsis1/contacts.csv"):
     print("CSV imported successfully")
 
 
-# ---------------- MENU ----------------
+#MENU
 def menu():
     conn = connect()
 
