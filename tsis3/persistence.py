@@ -2,13 +2,13 @@ import json
 
 def load_leaderboard():
     try:
-        return json.load(open("leaderboard.json"))
+        return json.load(open("tsis3/leaderboard.json"))
     except:
         return []
 
 def save_score(name, score, distance):
     try:
-        data = json.load(open("leaderboard.json"))
+        data = json.load(open("tsis3/leaderboard.json"))
     except:
         data = []
 
@@ -20,4 +20,4 @@ def save_score(name, score, distance):
 
     data = sorted(data, key=lambda x: x["score"], reverse=True)[:10]
 
-    json.dump(data, open("leaderboard.json", "w"))
+    json.dump(data, open("tsis3/leaderboard.json", "w"))
