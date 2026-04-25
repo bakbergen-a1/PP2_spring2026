@@ -11,10 +11,10 @@ def init_db():
     try:
         with conn.cursor() as cur:
            
-            run_sql_file(cur, "tsis1/schema.sql")
+            run_sql_file(cur,"tsis1/schema.sql")
 
             
-            run_sql_file(cur, "tsis1/procedures.sql")
+            run_sql_file(cur,"tsis1/procedures.sql")
 
         conn.commit()
         print("Database initialized successfully!")
