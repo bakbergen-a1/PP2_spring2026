@@ -35,9 +35,12 @@ text_active = False
 text_pos = None
 text_input = ""
 
-def save_canvas(canvas):
-    folder = "assets"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
+def save_canvas(canvas):
+    folder = os.path.join(BASE_DIR, "assets")
+
+    # создаём папку ВНУТРИ TSIS2
     if not os.path.exists(folder):
         os.makedirs(folder)
 
@@ -79,7 +82,7 @@ while running:
                 brush_size = 10
 
             if event.key == pygame.K_s and pygame.key.get_mods() & pygame.KMOD_CTRL:
-                save_canvas()
+                save_canvas(canvas)
 
             # Text tool typing
             if text_active:
