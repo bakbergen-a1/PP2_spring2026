@@ -39,7 +39,10 @@ def move_group(conn):
     group = input("Group name: ")
 
     with conn.cursor() as cur:
-        cur.execute("CALL move_to_group(%s, %s)", (name, group))
+        cur.execute(
+        "CALL move_to_group(%s::varchar, %s::varchar)",
+        (name, group)
+        )
 
     conn.commit()
     print("Group updated")
@@ -113,7 +116,7 @@ def paginate(conn):
 
 
 # ---------------- CSV IMPORT ----------------
-def import_csv(conn, filename="contacts.csv"):
+def import_csv(conn, filename="tsis1/contacts.csv"):
     with open(filename, "r") as file:
         reader = csv.DictReader(file)
 
