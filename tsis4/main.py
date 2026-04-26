@@ -13,7 +13,7 @@ font = pygame.font.SysFont(None, 30)
 init_db()
 
 # settings
-with open("settings.json") as f:
+with open("tsis4/settings.json") as f:
     settings = json.load(f)
 
 # background image
@@ -39,6 +39,7 @@ while running:
         if e.type == pygame.QUIT:
             running = False
 
+        # MENU
         if state == "menu":
             if e.type == pygame.KEYDOWN:
                 if e.key == pygame.K_RETURN:
@@ -49,6 +50,7 @@ while running:
                 else:
                     username += e.unicode
 
+        # GAME
         if state == "game":
             if e.type == pygame.KEYDOWN:
                 if e.key == pygame.K_UP: game.dx,game.dy=0,-CELL
@@ -56,6 +58,18 @@ while running:
                 if e.key == pygame.K_LEFT: game.dx,game.dy=-CELL,0
                 if e.key == pygame.K_RIGHT: game.dx,game.dy=CELL,0
 
+        # GAME OVER (ОСНОВНОЕ ИСПРАВЛЕНИЕ)
+        if state == "gameover":
+            if e.type == pygame.KEYDOWN:
+                if e.key == pygame.K_r:
+                    game.reset()
+                    state = "game"
+
+                if e.key == pygame.K_m:
+                    state = "menu"
+
+                if e.key == pygame.K_l:
+                    state = "leaderboard"
     # MENU
     if state == "menu":
         screen.blit(bg,(0,0))
