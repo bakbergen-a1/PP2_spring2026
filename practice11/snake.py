@@ -92,5 +92,4 @@ while running:
 
     pygame.display.flip()
     clock.tick(speed)
-
 pygame.quit()
