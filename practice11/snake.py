@@ -27,6 +27,7 @@ def generate_food():
 (food, food_value) = generate_food()
 food_timer = 0
 
+
 running = True
 while running:
     screen.fill((0,0,0))

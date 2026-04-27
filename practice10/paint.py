@@ -29,7 +29,7 @@ while running:
         if event.type == pygame.QUIT:
             running = False
 
-        # 🎮 Keyboard controls
+        # Keyboard controls
         if event.type == pygame.KEYDOWN:
 
             # Switch drawing modes
@@ -40,7 +40,7 @@ while running:
             if event.key == pygame.K_e:
                 mode = "eraser"
 
-            # 🎨 Change colors
+            # Change colors
             if event.key == pygame.K_1:
                 color = (255, 0, 0)   # red
             if event.key == pygame.K_2:
