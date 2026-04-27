@@ -13,7 +13,7 @@ class Game:
 
         self.coin_img = pygame.image.load("tsis3/assets/coin.png")
         self.coin_img = pygame.transform.scale(self.coin_img, (20, 20)) 
-        # 🔊 звуки
+        
         self.coin_sound = pygame.mixer.Sound("tsis3/assets/coin.wav")
         self.crash_sound = pygame.mixer.Sound("tsis3/assets/crash.wav")
 
