@@ -40,7 +40,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 def save_canvas(canvas):
     folder = os.path.join(BASE_DIR, "assets")
 
-    # создаём папку ВНУТРИ TSIS2
+    
     if not os.path.exists(folder):
         os.makedirs(folder)
 
