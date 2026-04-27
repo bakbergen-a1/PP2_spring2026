@@ -58,7 +58,7 @@ while running:
                 if e.key == pygame.K_LEFT: game.dx,game.dy=-CELL,0
                 if e.key == pygame.K_RIGHT: game.dx,game.dy=CELL,0
 
-        # GAME OVER (ОСНОВНОЕ ИСПРАВЛЕНИЕ)
+        # GAME OVER 
         if state == "gameover":
             if e.type == pygame.KEYDOWN:
                 if e.key == pygame.K_r:
