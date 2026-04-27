@@ -39,7 +39,6 @@ while running:
                 mode = "circle"
             if event.key == pygame.K_e:
                 mode = "eraser"
-
             # Change colors
             if event.key == pygame.K_1:
                 color = (255, 0, 0)   # red
